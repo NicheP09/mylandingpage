@@ -69,13 +69,16 @@ header {
 
 
 
+.hamburger{ 
+ 
+}
 
-
-.hamburger button {
+.hamburger-button {
   background: none;
   outline: none;
   border: none;
   cursor: pointer;
+  
 }
 
 
@@ -131,6 +134,14 @@ ul {
  font-size: var(--fts-1a);
  border-radius: 5px;
  padding-top: var(--padding-5); 
+ transition: 0.20s all;
+ transform: scale(0);
+ transform-origin: top right;
+}
+
+.active {
+  transform: scale(1);
+  transform-origin: right;
 }
 
 li {
@@ -160,17 +171,19 @@ ul button {
   color: var(--text-color1);
   border: none;
   outline: none;
-  height: 40px;
+  height: 50;
   font-size: var(--fts-1a);
   border-radius: 5px;
   cursor: pointer;
   transition: 0.15s all;
   padding: var(--padding-10);
-  margin-top: 10px;
+  margin-top: 20px;
   font-weight: 600;
   width:80%;
+  
 }
 
 ul button:hover {
   opacity: 0.8;
 }
+
