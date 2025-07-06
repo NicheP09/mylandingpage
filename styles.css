@@ -47,10 +47,9 @@
   align-items: center;
 }
 
-.grid {
-  display: grid;  
-  grid-template-columns: 1fr 1fr;
-}
+
+  
+
 body {
  background: url(/image/faded_gallery-OfdOEdGYiuk-unsplash.jpg) no-repeat;
  background-size: cover;
@@ -312,6 +311,27 @@ li a:hover::after {
   height: 32px;
 }
 
+.landing-page {
+  display: grid;  
+  grid-template-columns: 1fr 2fr;
+  justify-content: center;
+  align-items: center;
+  padding-top:  200px;
+  column-gap: 20px;
+}
+
+.services {
+  transition: 0.20s all;
+  animation: myImage 0.20s 0.1s  forwards;  
+  transform: scaleX(0);
+  transform-origin: right;
+}
+.services img {
+  width: 500px;
+  height: auto;
+  border-radius: 20px;
+}
+
 }
 
 
@@ -356,4 +376,16 @@ li a:hover::after {
     transform: scaleX(1.2);
     
   }
+}
+
+@keyframes myImage {
+  from {
+    transform: scaleX();
+  }
+
+  to {
+    transform: scale(1);
+    transform-origin: left;
+  }
+ 
 }
