@@ -23,6 +23,7 @@
   --fts-1a: 1.2rem;
 
   --fts-2: 1.8rem;
+   --fts-3: 2.8rem;
   
 
 }
@@ -43,6 +44,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .grid {
@@ -54,7 +56,12 @@ body {
  background-size: cover;
  background-position: center;
  min-height: 100dvh;
+ color: var(--text-color1);
+ text-align: center;
+ background-attachment: fixed;
+
 }
+
 
 header {
   position: fixed;
@@ -208,6 +215,43 @@ ul button {
 ul button:hover {
   opacity: 0.8;
 }
+main {
+  padding-top: 100px;
+  padding-inline: var(--padding-20);
+ 
+}
+
+.landing-page {
+  text-align: center;
+}
+
+.page-desc h1 {
+  font-size: var(--fts-2);
+ 
+  transition: 0.30s all;
+  animation: myHead 2s 1s  1 forwards;  
+  transform: scaleX(0) translateX(-100%);
+}
+
+.motto {
+  margin: 5px 0 50px 150px;
+  transition: 0.30s all;
+  animation: myHead 2s 3s  1 forwards;  
+  transform: scaleX(0) translateX(-100%);
+  font-style: italic;
+}
+
+.services {
+ text-align: center;
+
+}
+
+.services img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
 
 
 @media (min-width: 43.75em) {
@@ -266,11 +310,50 @@ li a:hover::after {
   margin: 0 0 3px 25px;
   width: 90px;
   height: 32px;
+}
 
-  
-  
 }
 
 
 
+@keyframes myHead {
+  0% {
+   transform: translateX(-30%);
+    transform: scaleX(0);
+  }
+
+  20% {
+     transform: translateX(-20%);
+     
+  }
+
+  40% {
+    transform: translateX(-10%);
+     transform: scaleX(1);
+  }
+  50% {
+     transform: translateX(-5%);
+    transform: scaleX(1);
+  }
+
+  80% {
+     transform: translateX(-2%);
+     background-image: linear-gradient(45deg, #00bfff, #e6e6fa);
+     background-size: cover;
+     -webkit-background-clip: text;
+     color: transparent;
+    transform: scaleX(1.2);
+     
+  }
+
+  100% {
+    transform: translateX(4);
+     background-image: linear-gradient(45deg, #00bfff, #e6e6fa, gold);
+     background-size: cover;
+     -webkit-background-clip: text;
+     color: transparent;
+     
+    transform: scaleX(1.2);
+    
+  }
 }
