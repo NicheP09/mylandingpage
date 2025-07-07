@@ -11,6 +11,8 @@ const aboutUs =  document.querySelector('.about-us');
 const homeBtn=  document.querySelector('.homebt');
 const serviceBtn=  document.querySelector('.servicebt');
 const contactBtn=  document.querySelector('.contactbt');
+const footer=  document.querySelector('footer');
+
 
 
  
@@ -26,7 +28,8 @@ hamburgerBtn.addEventListener('click', () => {
 })
 
 contactBtn.addEventListener('click', () => {
- ul.classList.remove('active')
+ ul.classList.remove('active');
+ footer.classList.add('footer-glow');
 
 })
 

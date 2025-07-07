@@ -65,7 +65,7 @@ body {
  min-height: 100dvh;
  color: var(--text-color1);
  background-attachment: fixed;
- max-width: max-content;
+ max-width: 100%;
  position: relative;
 
 }
@@ -410,6 +410,11 @@ form .login-button:hover {
 footer {
   row-gap: 5px;
   background: var(--background-color2);padding: var(--padding-5);
+  position: fixed;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   transition: all 0.20s ease-in-out;
  
 }
 
@@ -423,7 +428,6 @@ footer {
    color: var(--text-color1);
    cursor: pointer;
    transition: 0.20s all;
-
   
 }
 
@@ -438,12 +442,16 @@ ion-icon {
 
 footer p {
   font-size: var(--fts-small);
-  color: rgb(111, 108, 108);
+  color: rgb(255, 255, 255);
  
 }
 
 
 @media (min-width: 43.75em) {
+
+  body {
+    max-width: max-content;
+  }
   .hamburger {
     display: none;
   }
@@ -550,7 +558,12 @@ main {
   display: none;
 }
 
-
+.footer-glow {
+  box-shadow: 0 0 10px rgba(255, 255, 255, .1) ;
+  border-top: 2px solid  rgba(255, 255, 255, .2);
+  transition: 0.20s all ease-in-out;
+  background-color: rgb(84, 84, 84);
+}
 
 @keyframes myHead {
   0% {
