@@ -19,7 +19,13 @@ const footer=  document.querySelector('footer');
 
 
 
+loginBtnTop.addEventListener('click', () => {
+  intro.classList.toggle('noshow');
+  services.classList.toggle('noshow');
+  loginBox.classList.toggle('show');
+  ul.classList.remove('active');
 
+})
 
 
 hamburgerBtn.addEventListener('click', () => {
@@ -44,13 +50,7 @@ serviceBtn.addEventListener('click', () => {
 
 })
 
-loginBtnTop.addEventListener('click', () => {
-  intro.classList.toggle('noshow');
-  services.classList.toggle('noshow');
-  loginBox.classList.toggle('show');
-  ul.classList.remove('active');
 
-})
 
 closeIcon.addEventListener('click', () => {
    loginBox.classList.remove('show');
