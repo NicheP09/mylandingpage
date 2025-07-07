@@ -31,6 +31,7 @@ contactBtn.addEventListener('click', () => {
 })
 
 homeBtn.addEventListener('click', () => {
+  location.reload();
  ul.classList.remove('active')
 
 })
