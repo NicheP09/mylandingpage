@@ -3,14 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Landing Page</title>
+
+  <link rel="icon" href="/image/egg-sharp.svg" type="image/svg+xml">
+  
   <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+ 
   <link rel="stylesheet" href="styles.css">
+
+  <title>Landing Page</title>
   <script src="main.js" defer></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
   <header class="flex2">
-    <div class="logo">NicheP</div>
+    <div class="logo">Peters</div>
 
     <nav>
       <div class="hamburger">
@@ -19,31 +26,83 @@
         </button>
         </div>
       <ul class="ul">
-        <li ><a href="#home">Home</a> <i class='bx  bx-home'  ></i> </li>
-        <li><a href="#about">About</a> <i class='bx  bx-layers-alt'  ></i> </li>
-        <li ><a href="#services">Services</a> <i class='bx  bx-cloud-alt' ></i> </li>
-        <li ><a href="#contact">Contact</a> <i class='bx  bx-phone-book'  ></i> </li>
+        <li class="homebt" ><a href="#home">Home</a> <i class='bx  bx-home'  ></i> </li>
+        <li class="aboutbt"><a href="#aboutus">About</a> <i class='bx  bx-layers-alt'  ></i> </li>
+        <li class="servicebt" ><a href="services.html" target="_blank">Services</a> <i class='bx  bx-cloud-alt' ></i> </li>
+        <li class="contactbt" ><a href="#contact">Contact</a> <i class='bx  bx-phone-book'  ></i> </li>
         <div class="loginbutton">
          <button class="navbtn">Login</button>
         </div>
       </ul>
       </nav>
   </header>
-  <main>
-    <section class="landing-page">
-      <div class="page-desc" >
+  <main class="flex3">
+    <section class="landing-page ">
+      <div class="page-desc intro1" >
       <h1>Welcome to Peters </h1>
       <p class="motto">Always giving comfort </p>
       </div>
 
+      <div id="about-us" class="about-us page-desc ">
+      <h1 class="">About Us</h1>
+      <p class="about-p motto">We had this dream of becoming a tech pro in 2023. Then we began with our mobile phone that same year. After that we moved to a station laptop. Ever since we have been waxing stronger.</p>
+     </div>
+    
+      <div class="login-box">
+        <div class="close-icon"><i class='bx  bx-plus'  ></i> </div>
+        <div class="title">Login</div>
+        <form action="#" >
+          <div class="input-box">
+          <label for="username" class="flex2">
+            <input type="text" placeholder="Enter your user name"><i class='bx  bx-user'  ></i> 
+          </label>
+          </div>
+          
+          <div class="input-box">
+           <label for="email" class="flex2" >
+            <input type="email" placeholder="Enter your email"><i class='bx  bx-envelope-open'  ></i> 
+          </label>
+          </div>
+          <div class="input-box">
+           <label for="password" class="flex2">
+            <input type="password" placeholder="Enter password"> <i class='bx  bx-lock'  ></i> 
+          </label>
+          </div>
+          
+          <div class="remember-forgot flex2">
+            <div class="remember flex1"><input type="checkbox">Remember me </div>
+            <p class="forgot"><a href="">Forgot password</a></p>
+          </div>
+
+          <div class="login-button">
+            Login
+          </div>
+          <div class="account">Don't have an account? &nbsp; <a href="">Register</a></div>
+        </form>
+      </div>
+
+
       <div class="services">
-        <img src="image/still-life-books-versus-technology.jpg" alt="work space picture with laptop" width= "400"; height="400">
+        <img src="image/still-life-books-versus-technology.jpg" alt="work space picture with laptop" width= "350"; height="350">
+        <p>It begins with you</p>
       </div>
     </section>
+
+   
+
+
   </main>
 
-  <footer>
-    
+  <footer  id="contact" class="flex3">
+   
+   <div class="footer-content flex2">
+     <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
+     <a href=""><ion-icon name="logo-linkedin"></ion-icon></a>
+     <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
+     <a href="https://github.com/NicheP09" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+   </div>
+   <p>&copy; 2025 | Peters. | All rights reserved</p>
+     
   </footer>
 </body>
 </html>
