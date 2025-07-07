@@ -65,7 +65,7 @@ body {
  min-height: 100dvh;
  color: var(--text-color1);
  background-attachment: fixed;
- max-width: 1300px;
+ max-width: max-content;
  position: relative;
 
 }
