@@ -59,22 +59,25 @@
   
 
 body {
- background: url(/image/faded_gallery-OfdOEdGYiuk-unsplash.jpg) no-repeat;
+ background: url(/image/matt-ridley-Lyl8RL7imrw-unsplash.jpg) no-repeat;
  background-size: cover;
  background-position: center;
- color: var(--text-color1);
  background-attachment: fixed;
- max-width: 100%;
- position: relative;
 
+}
+
+.landing-page-con {
+ 
+ 
 }
 
 
 header {
   position: fixed;
   background: linear-gradient(to right, #ff6666, #ffcc66,#66cccc);
-  width: 100%;
-  height: 50px;
+  left: 0;
+  right: 0;
+  height: 60px;
   color: white;
   padding: var(--padding-20);
   z-index: 100;
@@ -154,7 +157,7 @@ ul {
  border-radius: 5px;
  padding-top: var(--padding-10); 
  transition: 0.20s all;
- transform: scale(0);
+ transform: translatex(100%);
  transform-origin: top right;
 }
 
@@ -225,12 +228,9 @@ ul button:hover {
   opacity: 0.8;
 }
 main {
- padding-top: 80px;
-
-}
-
-.landing-page {
-  padding: var(--padding-20);
+  padding-inline: var(--padding-20);
+ padding-block: 20%;
+ position: relative;
 }
 
 
@@ -263,19 +263,17 @@ main {
 
 
 .login-box {
-  text-align: center;
+text-align: center;
  display: none;
  background: transparent;
- width: 300px;
- min-height: 200px;
+ margin-inline: auto;
  line-height: 2;
  border-radius: 10px;
  border: 3px solid rgba(255, 255, 255, .5);
  backdrop-filter: blur(20px);
  box-shadow: 0 0 30px rgba(0, 0 , 0, .5);
  padding: var(--padding-20);
- position: relative;
- 
+ width: min(300px, 600px);
  transition: 0.20s all;
  cursor: pointer;
 }
@@ -284,14 +282,16 @@ main {
   position: absolute;
   top: 0;
   right: 0;
-  font-size: var(--fts-1a);
+  font-size: 1.5rem;
   background: rgba(163, 156, 156, 0.437);
   border-bottom-left-radius: 25px;
+  color: white;
 }
 
 .title {
   font-size: var(--fts-3);
   font-weight: 700;
+  color: var(--text-color1)
 }
 form {
   margin-top: 20px;
@@ -306,6 +306,7 @@ label {
   height: 50px;
   border-bottom: 4px solid rgb(202, 201, 201);
   margin-bottom: 10px;
+  font-size: 1.5rem;
 }
 
 input {
@@ -316,15 +317,16 @@ input {
   outline: none;
   border: none;
   color: var(--text-color1);
-  font-size: var(--fts-1a);
+  font-size: 1.5rem;
   transition: 0.15s all;
   padding: var(--padding-5);
+  padding-right: 10px;
   
 }
 
 .input-box input::placeholder {
   color: var(--text-color1);
-  font-size: var(--fts-1a);
+  font-size: 1.5rem;
   padding-inline: var(--padding-5);
 }
 
@@ -333,12 +335,17 @@ input {
 }
 
 .remember-forgot {
-  
+  color: var(--text-color1);
 }
 
 .remember input {
   width: initial;
   margin-right: 3px;
+}
+
+.account {
+  color: var(--text-color1);
+
 }
 
 .forgot a, .account a {
@@ -357,7 +364,9 @@ input {
   position: absolute;
   top: 15px;
   right: 10px;
-  font-size: var(--fts-1b);
+  font-size: var(--fts-2);
+  color: var(--text-color1);
+
 
 }
 
@@ -434,123 +443,7 @@ footer p {
 }
 
 
-@media (min-width: 43.75em) {
 
-  body {
-    max-width: max-content;
-  }
-  .hamburger {
-    display: none;
-  }
-
-
-
-  ul {
-  transform: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: initial;
-  background-color: initial;
-  height: initial;  
-  margin-right: 90px;
-  
-  }
-
-  ul li {
-    display: initial
-  }
-
-  li .bx {
-  display: none;
-}
-
-li a::after {
-  content: "";
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(to right, #162ea5,#6b0fd414, rgb(32, 134, 32) );
-  position: absolute;
-  top: 30px;
-  right: 0;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: 0.20s all;
-}
-
-li a:hover::after {
-  transform: scaleX(1);
-  transform-origin: right;
-}
-  ul button {
- 
-  font-size: var(--fts-1);
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.15s all;
-  padding: initial;
-  font-weight: 600;
-  margin: initial;
-  margin: 0 0 3px 25px;
-  width: 90px;
-  height: 32px;
-}
-
-main {
-  padding-block: 50px;
-  padding-inline: var(--padding-20);
- 
- 
-}
-
-.landing-page {
-  
-  display: grid;  
-  grid-template-columns: 1fr 1fr;
-  justify-content: center;
-  align-items: center;
-  padding-top:  100px;
-  column-gap: 50px;
-}
-
-.login-box {
-  margin-top: -80px; 
-}
-
-
-.services {
-  transition: 0.20s all;
-  animation: myImage 0.20s 0.1s  forwards;  
-  transform: scaleX(0);
-  transform-origin: right;
-}
-.services img {
-  width: 600px;
-  height: auto;
-  border-radius: 20px;
-}
-
-}
-
-
-
-.active {
-  transform: scale(1);
-  transform-origin: right;
-}
-.show {
-  display: block;
-}
-.noshow {
-  display: none;
-}
-
-.footer-glow {
-  box-shadow: 0 0 10px rgba(255, 255, 255, .1) ;
-  border-top: 2px solid  rgba(255, 255, 255, .2);
-  transition: 0.20s all ease-in-out;
-  background-color: rgb(84, 84, 84);
-}
 
 @keyframes myHead {
   0% {
@@ -574,7 +467,7 @@ main {
 
   80% {
      transform: translateX(-2%);
-     background-image: linear-gradient(45deg, #00bfff, #e6e6fa);
+     background-image: linear-gradient(45deg, #00bfff, #5c5c9e);
      background-size: cover;
      -webkit-background-clip: text;
      color: transparent;
@@ -584,7 +477,7 @@ main {
 
   100% {
     transform: translateX(4);
-     background-image: linear-gradient(45deg, #00bfff, #e6e6fa, gold);
+     background-image: linear-gradient(45deg, #ff00e6, #c70707, rgb(0, 255, 60));
      background-size: cover;
      -webkit-background-clip: text;
      color: transparent;
@@ -608,7 +501,126 @@ main {
 
 @media(min-width: 30em) {
   body {
-    background-attachment: fixed;
+   
     max-width: initial;
+    width: initial;
   }
+  .logo{
+    font-size: 3rem;
+  }
+
+  .page-desc h1 {
+    font-size: 3rem;
+  }
+  p.motto {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 2rem;
+    color: green;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  ul {
+  transform: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: initial;
+  background-color: initial;
+  height: initial;  
+  margin-right: 90px;
+  
+  }
+
+  ul li {
+    display: initial
+  }
+
+  li .bx {
+  display: none;
+}
+ul a {
+  font-size: 1.8rem;
+}
+
+ ul button {
+ 
+  font-size: 1.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.15s all;
+  font-weight: 600;
+  margin: initial;
+  margin: 0 0 3px 25px;
+  padding-block: 3px;
+}
+
+
+.landing-page {
+  
+  display: grid;  
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  grid-template-rows: auto auto;
+  align-items: center;
+  padding-top:  100px;
+  column-gap: 50px;
+}
+
+.services {
+  transition: 0.20s all;
+  animation: myImage 0.20s 0.1s  forwards;  
+  transform: scaleX(0);
+  transform-origin: right;
+}
+.services img {
+  min-width: 600px;
+  height: auto;
+  border-radius: 20px;
+}
+
+ion-icon {
+     font-size: 3.5rem;
+}
+
+footer p {
+  font-size: 1.8rem;
+  color: rgb(255, 255, 255);
+ 
+}
+.login-box {
+  margin-top: -15%;
+ width: min(600px, 800px);
+
+ margin-inline: 50%;
+
+}
+
+
+}
+
+
+
+
+.active {
+  transform: scale(1);
+  transform-origin: right;
+}
+.show {
+  display: block;
+}
+.noshow {
+  display: none;
+}
+
+.footer-glow {
+  box-shadow: 0 0 10px rgba(255, 255, 255, .1) ;
+  border-top: 2px solid  rgba(255, 255, 255, .2);
+  transition: 0.20s all ease-in-out;
+  background-color: rgb(84, 84, 84);
 }

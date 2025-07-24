@@ -19,13 +19,7 @@ const footer=  document.querySelector('footer');
 
 
 
-loginBtnTop.addEventListener('click', () => {
-  intro.classList.toggle('noshow');
-  services.classList.toggle('noshow');
-  loginBox.classList.toggle('show');
-  ul.classList.remove('active');
 
-})
 
 
 hamburgerBtn.addEventListener('click', () => {
@@ -61,14 +55,20 @@ closeIcon.addEventListener('click', () => {
 
 aboutBtn.addEventListener('click', () => {
   aboutUs.classList.add('show');
-  services.classList.remove('noshow');
   services.classList.add('show');
-  loginBox.classList.add('noshow');
   intro.classList.add('noshow');
    ul.classList.remove('active');
- 
+   loginBox.classList.remove('show');
 
 })
 
+loginBtnTop.addEventListener('click', () => {
+   loginBox.classList.add('show');
+  intro.classList.add('noshow');
+  services.classList.add('noshow');
+  aboutUs.classList.remove('show');
+  ul.classList.remove('active');
+
+})
 
 
