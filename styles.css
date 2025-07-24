@@ -62,7 +62,6 @@ body {
  background: url(/image/faded_gallery-OfdOEdGYiuk-unsplash.jpg) no-repeat;
  background-size: cover;
  background-position: center;
- min-height: 100dvh;
  color: var(--text-color1);
  background-attachment: fixed;
  max-width: 100%;
@@ -115,37 +114,25 @@ header {
 
 
 .bar {
-  position: relative;
  background: var(--background-color1);
- width: 22px;
+ 
  height: 3px;
  border-radius: 20px;
  margin-bottom: 5px;
  transition: 0.15s all;
-}
- 
-.bar::before,  .bar::after {
- content: "";
- background: var(--background-color1);
- height: 3px;
- border-radius: 20px;
- position: absolute;
- right: 0px;
- transition: 0.15s all;
 
 }
 
-
-.bar::before {
+.one {
   width: 23px;
-  top: -6px;
+}
+.two {
+  width: 21px;
+ 
 }
 
-.bar::after {
+.three{
   width: 19px;
-  position: absolute;
-  top: 6px;
-   
 }
 
 .bar:hover {
@@ -617,4 +604,11 @@ main {
     transform-origin: left;
   }
  
+}
+
+@media(min-width: 30em) {
+  body {
+    background-attachment: fixed;
+    max-width: initial;
+  }
 }
